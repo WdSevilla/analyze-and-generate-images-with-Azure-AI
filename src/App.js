@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function App() {
+function App() {
   const [imageUrl, setImageUrl] = useState('');
 
   const handleImageUrlChange = (event) => {
@@ -8,22 +8,21 @@ export default function App() {
   };
 
   const handleImageAnalysis = () => {
-    // Lógica para analizar la imagen
+    // Code to trigger image analysis
   };
 
   const handleImageGeneration = () => {
-    // Lógica para generar la imagen
+    // Code to trigger image generation
   };
 
   return (
     <div>
-      <h1>Título</h1>
-      <input type="text" value={imageUrl} onChange={handleImageUrlChange} placeholder="URL de la imagen" />
-      <button onClick={handleImageAnalysis}>Analizar imagen</button>
-      <button onClick={handleImageGeneration}>Generar imagen</button>
+      <h1>Title</h1>
+      <input type="text" value={imageUrl} onChange={handleImageUrlChange} />
+      <button onClick={handleImageAnalysis}>Analyze Image</button>
+      <button onClick={handleImageGeneration}>Generate Image</button>
     </div>
   );
 }
-import React, { useState } from 'react';
 
-
+export default App;
